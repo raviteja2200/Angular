@@ -3,7 +3,9 @@
  */
 angular
     .module('app')
-    .controller('homeCtrl',['$scope', function($scope){
+    .controller('homeCtrl',['$scope', 'friends', function($scope,friends){
         $scope.title = "Home";
-        /*$scope.items = ['home','about','contact'];*/
+        
+        $scope.items = ['home','about','contact'];
+    	
     }]);

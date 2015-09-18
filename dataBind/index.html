@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dataBind</title>
+</head>
+<body>
+<div ng-app>
+	<b>Bill:</b>
+	<div>
+		No of Items:<input type="number" min="0" ng-model="n">		
+	</div>
+	<div>
+		Price:<input type="number" min="0" ng-model="price">
+	</div>
+	<div>
+		<b>Total:</b>{{n*price|currency}}
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>	
+</body>
+</html>

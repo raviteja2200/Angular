@@ -8,15 +8,22 @@ var app = angular
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('home',{
-                url:'/',
+                url:'/home',
                 templateUrl: 'templates/home.html',
-                controller: 'homeCtrl'
+                controller: 'homeCtrl',
             })
             .state('about',{
                 url:'/about',
                 templateUrl: 'templates/about.html',
-                controller:'aboutCtrl'
-            })
+                controller:'aboutCtrl',
+                resolve:{
+                    friends:['$http',function($http){
+                        return $http.get('api/friends.json').then(function(response){
+                            return response.data;
+                        })
+                    }]
+                }
+           })
             .state('contact',{
                 url:'/contact',
                 templateUrl: 'templates/contact.html',

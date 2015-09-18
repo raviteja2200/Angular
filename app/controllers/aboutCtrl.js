@@ -3,6 +3,9 @@
  */
 angular
     .module('app')
-    .controller('aboutCtrl', ['$scope', function($scope) {
+    .controller('aboutCtrl', ['$scope','friends', function($scope,friends) {
         $scope.title = "About";
+        $scope.items = ["ravi","Teja","IDK"];
+        $scope.selectedValue ="ravi";
+        $scope.friends = friends;
     }]);
