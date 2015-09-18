@@ -1,0 +1,42 @@
+<div class="row">
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <div style="height:50px">
+
+    </div>
+    <!-- <h1>Hello team Welcome to the {{message}}</h1>
+    <input type="text" ng-model="message" /> -->
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="First Name" ng-model="registrationDetails.firstName">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Last Name" ng-model="registrationDetails.lastName" >
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" placeholder="AGE" max=99 min=1>
+        </div>
+        <div class="form-group">
+            <input type="radio" value="male" name="optionsRadios" /> Male
+        </div>
+        <div class="form-group">
+            <input type="radio" value="Female" name="optionsRadios" /> Female
+        </div>
+        <div class ="form-group">
+            <select class="form-control" ng-model="selectedLocation" ng-options="location.city group by location.state for location in locations"
+                    ng-change="dropdownChange()">
+
+            </select>
+        </div>
+        <div class = "form-group">
+            <input type="checkbox" value="Agree" ng-model="checked" /> I Agree with Terms&Conditions
+
+        </div>
+
+        <button type="submit" class="btn btn-primary" ng-click="registerUser()" ng-disabled="!checked">Register</button>
+    </form>
+</div>
+<div class="col-md-4"></div>
+</div>

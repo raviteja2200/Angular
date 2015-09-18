@@ -1,4 +1,6 @@
-angular.module('twitterApp',[]);
+angular.module('twitterApp',[
+		'ui.router'
+	]);
 
 //if we have any dependecies on some other file we have to add htem in square brackets[]
 /*services and factories are injectable components which are used for data
