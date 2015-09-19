@@ -8,4 +8,9 @@ angular
         $scope.items = ["ravi","Teja","IDK"];
         $scope.selectedValue ="ravi";
         $scope.friends = friends;
+
+        $scope.save = function() {
+        	$hhtp.post('api/friends', friends);
+        	alert(JSON.stringify($scope.friends));
+        }
     }]);

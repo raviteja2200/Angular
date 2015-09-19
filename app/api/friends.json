@@ -1,5 +1,4 @@
 [
-	{"name":"Sai","age": 30},
-	{"name":"Emo","age": 20}
-
+	{"name":"Sai","age": 30,"isSpecial": false},
+	{"name":"Emo","age": 20, "isSpecial": true}
 ]
