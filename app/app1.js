@@ -10,7 +10,7 @@ var app = angular
             .state('home',{
                 url:'/home',
                 templateUrl: 'templates/home.html',
-                controller: 'homeCtrl',
+                controller: 'homeCtrl'
             })
             .state('about',{
                 url:'/about',
