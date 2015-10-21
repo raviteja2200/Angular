@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+</head>
+<body ng-app="app">
+<div ng-controller="testController">
+	Student Name:<input type="text" ng-model="user.name"/>
+	{{user.name}}
+	<br>
+	<br>
+	<br>
+
+	Student Age:<input type="number" ng-model="user.age" />
+
+	<input type="submit" ng-click="update(user)" value="Save" />
+	<p>
+		student = {{user|json}}
+	</p>
+	<p>
+		saved info={{user.name|json}}
+	</p>
+</div>	
+	<script>
+
+	angular.module('app',[])
+			.controller('testController',['$scope',function($scope){
+				$scope.master={};
+
+				$scope.update=function(user){
+					$scope.master += angular.copy(user);
+					console.log(user.name);
+				};
+
+				$scope.reset = function(){
+					$scope.user = angular.copy($scope.master);
+				};
+
+				
+			}])
+	</script>
+
+</body>
+</html>
